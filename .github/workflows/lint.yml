@@ -1,0 +1,23 @@
+
+name: Lint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+          
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup python
+      uses: astral-sh/setup-uv@v7
+    
+    - name: Test for python ${{ matrix.python-version }}
+      run: |
+        uv run ruff check 
