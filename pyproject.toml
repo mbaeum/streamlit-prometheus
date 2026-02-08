@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Moritz Baeumel", email = "moritzbaeumnel@gmail.com" }
 ]
-requires-python = ">=3.13.1"
+requires-python = ">=3.10"
 dependencies = [
     "prometheus-client>=0.24.1",
     "streamlit>=1.54.0",
